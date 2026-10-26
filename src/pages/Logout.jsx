@@ -1,0 +1,4 @@
+import { Link } from "react-router-dom";
+export default function Logout() {
+  return <main className="flex min-h-screen items-center justify-center bg-slate-950 px-4 py-10"><section className="w-full max-w-md rounded-3xl bg-white p-8 text-center shadow-2xl"><span className="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-violet-50 text-xl text-violet-700"><i className="fa-solid fa-arrow-right-from-bracket"/></span><h1 className="mt-5 text-2xl font-bold text-slate-900">Leave the preview?</h1><p className="mt-2 text-sm leading-6 text-slate-500">This demo has no active user session to end. You can return to the preview login page.</p><Link to="/" className="mt-6 inline-flex w-full justify-center rounded-xl bg-violet-700 px-4 py-3 font-semibold text-white hover:bg-violet-800">Return to login</Link><Link to="/dashboard" className="mt-4 inline-block text-sm font-medium text-slate-500 hover:text-violet-700">Stay in dashboard</Link></section></main>;
+}

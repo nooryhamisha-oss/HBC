@@ -1,0 +1,4 @@
+import AdminLayout from "../components/AdminLayout.jsx";
+export default function MyDependents() {
+  return <AdminLayout><div className="mb-6"><h2 className="text-xl font-bold text-slate-900">My dependents</h2><p className="mt-1 text-sm text-slate-500">This route existed in the source project, but its page component was empty.</p></div><section className="rounded-2xl border border-slate-200 bg-white px-5 py-12 text-center"><span className="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-violet-50 text-xl text-violet-700"><i className="fa-solid fa-file-lines"/></span><h3 className="mt-4 font-bold text-slate-900">No page data available</h3><p className="mx-auto mt-2 max-w-lg text-sm leading-6 text-slate-500">The original file contained no implementation. This placeholder keeps the route working without inventing a workflow or records. Confirm what “dependents” means in the HBC process before building this section.</p></section></AdminLayout>;
+}

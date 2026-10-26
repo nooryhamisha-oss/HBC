@@ -1,0 +1,164 @@
+/* Projects page track picker: explicitly imported so the custom menu cannot fall back to native styles. */
+.project-track-picker {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  min-height: 56px;
+  padding: 0 15px;
+  border: 1px solid #d8c9ff;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(55, 25, 100, 0.07);
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+.project-track-picker:hover,
+.project-track-picker.is-open {
+  border-color: #8b5cf6;
+  box-shadow:
+    0 0 0 3px rgba(124, 58, 237, 0.12),
+    0 8px 20px rgba(55, 25, 100, 0.08);
+}
+.project-track-label {
+  flex: 0 0 auto;
+  color: #6d28d9;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+.project-track-trigger {
+  appearance: none;
+  -webkit-appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+  min-height: 54px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #29213a;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 700;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+.project-track-trigger:focus-visible {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 3px;
+}
+.project-track-chevron {
+  flex: 0 0 auto;
+  color: #6d28d9;
+  transition: transform 0.18s ease;
+}
+.project-track-chevron.rotate {
+  transform: rotate(180deg);
+}
+.project-track-menu {
+  position: absolute;
+  z-index: 1000;
+  top: calc(100% + 7px);
+  right: 0;
+  left: 0;
+  display: block;
+  overflow: hidden;
+  padding: 6px;
+  border: 1px solid #ddd0ff;
+  background: #fff;
+  box-shadow: 0 18px 38px rgba(35, 15, 70, 0.2);
+  animation: project-menu-in 0.14s ease-out;
+}
+.project-track-option {
+  appearance: none;
+  -webkit-appearance: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 42px;
+  margin: 0;
+  padding: 10px 11px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #433852;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.35;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+.project-track-option:hover {
+  background: #f5f0ff;
+  color: #5b21b6;
+}
+.project-track-option.selected {
+  background: #eee7ff;
+  color: #5b21b6;
+  font-weight: 800;
+}
+.project-track-option.selected:hover {
+  background: #e5d9ff;
+}
+.project-track-dot {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 9px;
+  border-radius: 50%;
+  background: #7c3aed;
+}
+.project-track-dot.all-dot {
+  background: linear-gradient(135deg, #7c3aed, #d946ef);
+}
+.project-track-option .dot-1 {
+  background: #7c3aed;
+}
+.project-track-dot.dot-2 {
+  background: #db2777;
+}
+.project-track-dot.dot-3 {
+  background: #ea580c;
+}
+.project-track-dot.dot-4 {
+  background: #0891b2;
+}
+.project-track-dot.dot-5 {
+  background: #059669;
+}
+.project-track-option i {
+  margin-left: auto;
+  font-size: 11px;
+}
+@keyframes project-menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 639px) {
+  .project-track-picker {
+    padding: 0 11px;
+    gap: 8px;
+  }
+  .project-track-trigger {
+    font-size: 12px;
+  }
+  .project-track-option {
+    font-size: 11px;
+  }
+}
